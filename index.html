@@ -1,42 +1,73 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Business Site</title>
-  <link rel="stylesheet" href="code/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Roboto+Slab:wght@600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <nav>
     <ul>
-      <li><a href="#about">About</a></li>
-      <li><a href="#features">Features</a></li>
-      <li><a href="#pricing">Pricing</a></li>
-      <li><a href="#contact">Contact</a></li>
+      <li><a href="#primary-accent">Primary Accent</a></li>
+      <li><a href="#neutral-light">Neutral Light</a></li>
+      <li><a href="#neutral-dark">Neutral Dark</a></li>
+      <li><a href="#success-green">Success Green</a></li>
+      <li><a href="#error-red">Error Red</a></li>
     </ul>
   </nav>
 
-  <section id="about">
-    <h2>About</h2>
-    <p>Welcome to our website...</p>
+  <h1>Color Usage Guide</h1>
+
+  <section id="primary-accent">
+    <h2>Primary Accent (Teal Blue)</h2>
+    <p>Used for headers, call-to-action buttons, and important highlights.</p>
+    <div class="example-section">
+      <h2>This is a Header Styled with Primary Accent</h2>
+      <button class="primary-button">Primary Button</button>
+    </div>
   </section>
 
-  <section id="features">
-    <h2>Features</h2>
-    <p>Explore our features...</p>
+  <section id="neutral-light">
+    <h2>Neutral Light (Soft Gray)</h2>
+    <p>Used for background tones and less visually heavy sections.</p>
+    <div class="example-section" style="background-color: #F3F4F6;">
+      <p>This section uses the Neutral Light color as its background.</p>
+    </div>
   </section>
 
-  <section id="pricing">
-    <h2>Pricing</h2>
-    <p>Choose your plan...</p>
+  <section id="neutral-dark">
+    <h2>Neutral Dark (Slate Gray)</h2>
+    <p>Used for body text, secondary buttons, and footer areas.</p>
+    <div class="example-section">
+      <button class="secondary-button">Secondary Button</button>
+      <p>This text is styled with Neutral Dark for body content.</p>
+    </div>
   </section>
 
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Get in touch...</p>
+  <section id="success-green">
+    <h2>Success Green</h2>
+    <p>Used for success messages or confirmation highlights.</p>
+    <div class="example-section">
+      <p class="success-message">Success! Your action was completed successfully.</p>
+    </div>
   </section>
+
+  <section id="error-red">
+    <h2>Error Red</h2>
+    <p>Used for error messages or warnings.</p>
+    <div class="example-section">
+      <p class="error-message">Error! Something went wrong. Please try again.</p>
+    </div>
+  </section>
+
+  <div class="footer">
+    This is a footer styled with Neutral Dark as its background color.
+  </div>
 </body>
 
 </html>

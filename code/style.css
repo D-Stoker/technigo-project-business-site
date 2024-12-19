@@ -1,75 +1,151 @@
-    /* General Styles */
-    body {
-      margin: 0;
-      font-family: 'Roboto', sans-serif;
-    }
+/* Base Styling */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 20px;
+  background-color: #F8FAFC;
+  /* Soft light gray */
+  color: #1E293B;
+  /* Dark charcoal for main text */
+  scroll-behavior: smooth;
+  /* Enable smooth scrolling */
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+/* Navigation */
+nav {
+  position: sticky;
+  top: 0;
+  background-color: #F8FAFC;
+  /* Match body background */
+  padding: 10px 20px;
+  border-bottom: 2px solid #CBD5E1;
+  /* Light blue-gray border */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow */
+  z-index: 1000;
+}
 
-    /* Navigation Bar */
-    nav {
-      background-color: #F1F5F9;
-      /* Light gray */
-      padding: 10px 20px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      /* Subtle shadow */
-    }
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+}
 
-    nav ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-      justify-content: center;
-      gap: 20px;
-      /* Spacing between links */
-    }
+nav ul li a {
+  text-decoration: none;
+  color: #0F172A;
+  /* Dark navy */
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
 
-    nav a {
-      text-decoration: none;
-      color: #1E293B;
-      /* Charcoal gray */
-      font-size: 1rem;
-      font-weight: bold;
-      padding: 5px 10px;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
+nav ul li a:hover {
+  background-color: #CBD5E1;
+  /* Light blue-gray highlight */
+}
 
-    nav a:hover {
-      background-color: #1E293B;
-      /* Charcoal gray background */
-      color: white;
-      /* Light text for contrast */
-      border-radius: 4px;
-    }
+/* Headers */
+h1,
+h2 {
+  font-family: 'Roboto Slab', serif;
+  /* Modern serif for headers */
+  color: #0F172A;
+  /* Rich dark navy */
+}
 
-    /* Highlight Active Section */
-    nav a:focus {
-      background-color: #16A34A;
-      /* Green for active link */
-      color: white;
-      border-radius: 4px;
-    }
+h1 {
+  font-size: 2rem;
+}
 
-    section {
-      padding: 100px 20px;
-      /* Adjust padding for better readability */
-      margin-top: 40px;
-      border: 2px solid transparent;
-      /* Default border */
-      border-radius: 8px;
-    }
+h2 {
+  font-size: 1.5rem;
+  margin-top: 40px;
+}
 
-    section:target {
-      border-color: #16A34A;
-      /* Green border for active section */
-      box-shadow: 0 0 10px rgba(22, 163, 74, 0.5);
-      /* Glow effect */
-      background-color: #F8FAFC;
-      /* Light background to emphasize */
-    }
+/* Paragraph Text */
+p {
+  margin: 10px 0;
+  line-height: 1.6;
+  color: #475569;
+  /* Softer dark gray for readability */
+}
+
+/* Buttons */
+.primary-button {
+  background-color: #1E293B;
+  /* Charcoal gray */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.primary-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 6px rgba(30, 41, 59, 0.5);
+  /* Charcoal shadow */
+}
+
+.secondary-button {
+  background-color: #374151;
+  /* Dark steel gray */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.secondary-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 6px rgba(55, 65, 81, 0.5);
+  /* Steel shadow */
+}
+
+/* Status Messages */
+.success-message {
+  color: #16A34A;
+  /* Rich green with depth */
+  font-weight: bold;
+}
+
+.error-message {
+  color: #DC2626;
+  /* Deep, bold red */
+  font-weight: bold;
+}
+
+/* Footer */
+.footer {
+  background-color: #F1F5F9;
+  /* Slightly darker light gray */
+  color: #0F172A;
+  /* Dark navy text */
+  padding: 20px;
+  margin-top: 40px;
+  text-align: center;
+  border-top: 3px solid #0F172A;
+  /* Dark navy accent */
+}
+
+/* Example Section */
+.example-section {
+  padding: 20px;
+  background-color: white;
+  /* White card background */
+  border: 2px solid #CBD5E1;
+  /* Light blue-gray border */
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Subtle shadow for depth */
+}
