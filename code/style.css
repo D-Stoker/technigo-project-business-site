@@ -1,5 +1,75 @@
-/* After you've linked the CSS file in the HTML,
-this should turn the background blue ;) */
-body {
-  background: blue;
-}
+    /* General Styles */
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Navigation Bar */
+    nav {
+      background-color: #F1F5F9;
+      /* Light gray */
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      /* Subtle shadow */
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      /* Spacing between links */
+    }
+
+    nav a {
+      text-decoration: none;
+      color: #1E293B;
+      /* Charcoal gray */
+      font-size: 1rem;
+      font-weight: bold;
+      padding: 5px 10px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    nav a:hover {
+      background-color: #1E293B;
+      /* Charcoal gray background */
+      color: white;
+      /* Light text for contrast */
+      border-radius: 4px;
+    }
+
+    /* Highlight Active Section */
+    nav a:focus {
+      background-color: #16A34A;
+      /* Green for active link */
+      color: white;
+      border-radius: 4px;
+    }
+
+    section {
+      padding: 100px 20px;
+      /* Adjust padding for better readability */
+      margin-top: 40px;
+      border: 2px solid transparent;
+      /* Default border */
+      border-radius: 8px;
+    }
+
+    section:target {
+      border-color: #16A34A;
+      /* Green border for active section */
+      box-shadow: 0 0 10px rgba(22, 163, 74, 0.5);
+      /* Glow effect */
+      background-color: #F8FAFC;
+      /* Light background to emphasize */
+    }
