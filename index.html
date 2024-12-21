@@ -12,61 +12,105 @@
 
 <body>
   <nav>
+    <div class="logo-container">
+      <img src="code/assets/d_stoker-logo.jpg" alt="logo" class="logo" />
+    </div>
     <ul>
-      <li><a href="#primary-accent">Primary Accent</a></li>
-      <li><a href="#neutral-light">Neutral Light</a></li>
-      <li><a href="#neutral-dark">Neutral Dark</a></li>
-      <li><a href="#success-green">Success Green</a></li>
-      <li><a href="#error-red">Error Red</a></li>
+      <li><a href="#hero">"Hero"</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
-  <h1>Color Usage Guide</h1>
+  <h1>D. Stoker | Web Dev Solutions</h1>
 
-  <section id="primary-accent">
-    <h2>Primary Accent (Teal Blue)</h2>
-    <p>Used for headers, call-to-action buttons, and important highlights.</p>
-    <div class="example-section">
-      <h2>This is a Header Styled with Primary Accent</h2>
-      <button class="primary-button">Primary Button</button>
+  <section id="hero">
+    <h2>From Concept to Code: Making Your Ideas Come to Life</h2>
+    <p></p>
+    <div class="box-main">
+      <p>By combining thoughtful design with technical skills, I build websites that perform well, engage visitors, and
+        are easy to navigate, making your online presence memorable.</p>
+      <button class="primary-button">See My Portfolio</button>
+      <button class="secondary-button">Let's Work Together</button>
     </div>
   </section>
 
-  <section id="neutral-light">
-    <h2>Neutral Light (Soft Gray)</h2>
-    <p>Used for background tones and less visually heavy sections.</p>
-    <div class="example-section" style="background-color: #F3F4F6;">
-      <p>This section uses the Neutral Light color as its background.</p>
+  <section id="about">
+    <h2>About</h2>
+    <p>With over 20 years of experience spanning web design, teaching, communications, and manufacturing, I bring a
+      unique perspective to web development. My journey into coding has been driven by a passion for solving problems
+      and crafting intuitive, user-friendly websites that balance functionality with design. I’m excited to grow my
+      skills and bring new ideas to life through web development.</p>
+    <div class="box-main">
+      <p>Key skills:</p>
+      <ul>
+        <li>HTML, CSS (Responsive Web Design)</li>
+        <li>Problem Solving & Creative Thinking</li>
+        <li>Web accessibility Considerations</li>
+      </ul>
     </div>
   </section>
 
-  <section id="neutral-dark">
-    <h2>Neutral Dark (Slate Gray)</h2>
-    <p>Used for body text, secondary buttons, and footer areas.</p>
-    <div class="example-section">
-      <button class="secondary-button">Secondary Button</button>
-      <p>This text is styled with Neutral Dark for body content.</p>
+  <section id="portfolio">
+    <h2>Portfolio</h2>
+    <p class="error-message">[insert Carousel here?]</p>
+    <div class="box-main">
+      <p>Project 1: “Responsive News Website - A user-friendly, mobile-optimized site built with HTML and CSS to provide
+        a seamless reading experience across devices.</p>
+      <p>Project 2: “Contact Form with Enhanced Accessibility - Developed using HTML5 and ARIA attributes to create an
+        inclusive experience for all users.</p>
     </div>
   </section>
 
-  <section id="success-green">
-    <h2>Success Green</h2>
-    <p>Used for success messages or confirmation highlights.</p>
-    <div class="example-section">
-      <p class="success-message">Success! Your action was completed successfully.</p>
-    </div>
-  </section>
+  <section id="contact">
+    <h2>Contact</h2>
+    <p><em>[Insert contact form description here.]</em></p>
+    <div class="box-main">
+      <form action="/submit" method="POST">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required>
 
-  <section id="error-red">
-    <h2>Error Red</h2>
-    <p>Used for error messages or warnings.</p>
-    <div class="example-section">
-      <p class="error-message">Error! Something went wrong. Please try again.</p>
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone">Phone Number (optional):</label>
+        <input type="tel" id="phone" name="phone">
+
+        <label for="services">What services are you interested in?</label>
+        <input type="checkbox" id="webdev" name="services" value="Web Development">
+        <label for="webdev">Web Development</label><br>
+        <input type="checkbox" id="responsive" name="services" value="Responsive Design">
+        <label for="responsive">Responsive Design</label><br>
+        <input type="checkbox" id="ecommerce" name="services" value="E-commerce Setup">
+        <label for="ecommerce">E-commerce Setup</label><br>
+
+        <label for="description">Briefly describe your project:</label>
+        <textarea id="description" name="description" rows="4" required></textarea>
+
+        <label for="budget">Budget Range:</label>
+        <input type="radio" id="under500" name="budget" value="Under $500">
+        <label for="under500">Under $500</label><br>
+        <input type="radio" id="500to1000" name="budget" value="$500 - $1,000">
+        <label for="500to1000">$500 - $1,000</label><br>
+
+        <label for="timeline">Project Timeline:</label>
+        <input type="text" id="timeline" name="timeline" placeholder="e.g., Within 2 weeks" required>
+
+        <label for="newsletter">Would you like to receive updates?</label>
+        <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+        <label for="newsletter">Yes, send me updates.</label><br>
+
+        <label for="captcha">What is 5 + 3?</label>
+        <input type="text" id="captcha" name="captcha" required>
+
+        <input type="submit" value="Submit">
+      </form>
     </div>
   </section>
 
   <div class="footer">
-    This is a footer styled with Neutral Dark as its background color.
+    &copy; D. Stoker
   </div>
 </body>
 

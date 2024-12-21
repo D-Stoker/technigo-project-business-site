@@ -12,10 +12,14 @@ body {
 
 /* Navigation */
 nav {
+  display: flex;
+  align-items: center;
+  /* Vertically centers the content */
+  justify-content: space-between;
+  /* Aligns items on opposite sides */
   position: sticky;
   top: 0;
   background-color: #F8FAFC;
-  /* Match body background */
   padding: 10px 20px;
   border-bottom: 2px solid #CBD5E1;
   /* Light blue-gray border */
@@ -24,28 +28,112 @@ nav {
   z-index: 1000;
 }
 
+nav .logo-container {
+  flex-shrink: 0;
+  /* Prevents the logo from shrinking */
+  margin-right: 20px;
+  /* Adds space between logo and links */
+}
+
+nav .logo {
+  height: 40px;
+  /* Smaller logo size for larger screens */
+  width: auto;
+}
+
 nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
   margin: 0;
   padding: 0;
-  justify-content: center;
+  align-items: center;
+  /* Ensure links align with the logo */
+  flex-wrap: wrap;
+}
+
+/* List Items */
+nav ul li {
+  display: inline-block;
+  /* margin: 0 10px; */
+  /* Ensures list items stay inline but can wrap when necessary */
 }
 
 nav ul li a {
   text-decoration: none;
-  color: #0F172A;
-  /* Dark navy */
   font-weight: 500;
   padding: 8px 12px;
   border-radius: 4px;
   transition: background-color 0.3s;
+  color: inherit;
+  /* Keeps text color consistent */
+  text-align: center;
+  /* Centers the text horizontally */
+  white-space: nowrap;
 }
 
 nav ul li a:hover {
   background-color: #CBD5E1;
   /* Light blue-gray highlight */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+  nav {
+    flex-direction: column;
+    /* Stack the items vertically on small screens */
+    align-items: center;
+    /* Center-align logo and links */
+  }
+
+  nav ul {
+    width: 100%;
+    /* Takes up the full width */
+    flex-direction: column;
+    /* Stack the list items vertically */
+    align-items: center;
+    /* Center-align the items */
+    gap: 1px;
+    /* Reduce the gap between items */
+    padding: 0;
+    /* Remove extra padding from the container */
+  }
+
+  nav ul li {
+    margin: 2px 0;
+    /* Adjust margin to provide space between stacked links */
+    padding: 12px;
+    /* Adjust padding for a more button-like feel */
+    display: block;
+    /* Make the link a block-level element so it takes up full width */
+
+  }
+
+  nav ul li a {
+    padding: 8px 12px;
+    /* Adjust padding for a more compact look */
+    display: block;
+    /* Make the link a block-level element so it takes up full width */
+    line-height: 1.2;
+    /* Reduce line height for tighter spacing */
+  }
+
+  nav .logo {
+    height: 160px;
+    /* Larger logo size for smaller screens */
+    width: auto;
+  }
+
+  nav .logo-container {
+    margin-right: 20px;
+    /* Adds space below the logo on small screens */
+    border: 2px solid #CBD5E1;
+    /* Light blue-gray border */
+    border-radius: 8px;
+    /* Optional: round the corners */
+    width: auto;
+    /* Maintains aspect ratio */
+  }
 }
 
 /* Headers */
@@ -114,13 +202,11 @@ p {
 /* Status Messages */
 .success-message {
   color: #16A34A;
-  /* Rich green with depth */
   font-weight: bold;
 }
 
 .error-message {
   color: #DC2626;
-  /* Deep, bold red */
   font-weight: bold;
 }
 
@@ -137,8 +223,8 @@ p {
   /* Dark navy accent */
 }
 
-/* Example Section */
-.example-section {
+/* Sections */
+.box-main {
   padding: 20px;
   background-color: white;
   /* White card background */
@@ -148,4 +234,8 @@ p {
   margin-bottom: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   /* Subtle shadow for depth */
+}
+
+.box-dark {
+  background-color: #F3F4F6;
 }
