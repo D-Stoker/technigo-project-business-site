@@ -239,3 +239,111 @@ p {
 .box-dark {
   background-color: #F3F4F6;
 }
+
+/* Form Elements */
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+label {
+  font-weight: bold;
+  display: flex;
+  /* Keeps label and input on the same line */
+  align-items: center;
+  /* Vertically aligns input with label text */
+  margin-bottom: 5px;
+  /* Adds space between the label inputs */
+  white-space: normal;
+  /* Allows the label to wrap properly when the viewport is narrow */
+}
+
+label span {
+  margin-left: 5px;
+  /* Space between the checkbox/radio and the label text */
+  white-space: normal;
+  /* Allow label text to wrap as needed */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  margin: 0;
+  /* Remove default margin */
+  vertical-align: middle;
+  /* Align to the middle of the text */
+  width: auto;
+  /* Ensure the input takes its natural size */
+}
+
+/* Apply specific styles to form elements within .box-main, but don't affect overall layout */
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  /* Adds space between each checkbox group */
+}
+
+/* Align checkboxes and labels on the same line */
+.checkbox-group input[type="checkbox"] {
+  vertical-align: middle;
+  /* Ensure the checkbox is vertically aligned with the label text */
+  margin: 0 5px 0 0;
+  /* Remove any default margins and space the checkbox from the label */
+}
+
+/* Ensure labels stay inline with the checkbox */
+.checkbox-group label {
+  display: inline-block;
+  /* Align the label inline with the checkbox */
+  vertical-align: middle;
+  /* Vertically align label text with checkbox */
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+input[type="submit"]:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+  form {
+    padding: 15px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  textarea {
+    font-size: 14px;
+  }
+}
