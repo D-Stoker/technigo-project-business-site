@@ -3,41 +3,31 @@ body {
   font-family: 'Roboto', sans-serif;
   margin: 20px;
   background-color: #F8FAFC;
-  /* Soft light gray */
   color: #1E293B;
-  /* Dark charcoal for main text */
   scroll-behavior: smooth;
-  /* Enable smooth scrolling */
 }
 
 /* Navigation */
 nav {
   display: flex;
   align-items: center;
-  /* Vertically centers the content */
   justify-content: space-between;
-  /* Aligns items on opposite sides */
   position: sticky;
   top: 0;
   background-color: #F8FAFC;
   padding: 10px 20px;
   border-bottom: 2px solid #CBD5E1;
-  /* Light blue-gray border */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  /* Subtle shadow */
   z-index: 1000;
 }
 
 nav .logo-container {
   flex-shrink: 0;
-  /* Prevents the logo from shrinking */
   margin-right: 20px;
-  /* Adds space between logo and links */
 }
 
 nav .logo {
   height: 40px;
-  /* Smaller logo size for larger screens */
   width: auto;
 }
 
@@ -48,15 +38,12 @@ nav ul {
   margin: 0;
   padding: 0;
   align-items: center;
-  /* Ensure links align with the logo */
   flex-wrap: wrap;
 }
 
 /* List Items */
 nav ul li {
   display: inline-block;
-  /* margin: 0 10px; */
-  /* Ensures list items stay inline but can wrap when necessary */
 }
 
 nav ul li a {
@@ -66,15 +53,12 @@ nav ul li a {
   border-radius: 4px;
   transition: background-color 0.3s;
   color: inherit;
-  /* Keeps text color consistent */
   text-align: center;
-  /* Centers the text horizontally */
   white-space: nowrap;
 }
 
 nav ul li a:hover {
   background-color: #CBD5E1;
-  /* Light blue-gray highlight */
 }
 
 /* Responsive Design */
@@ -136,13 +120,24 @@ nav ul li a:hover {
   }
 }
 
-/* Headers */
+header {
+  position: relative;
+  width: 100%;
+}
+
+.hero-image img {
+  width: 100%;
+  height: auto;
+  /* Maintains aspect ratio */
+  object-fit: cover;
+  /* Ensures the image covers the container */
+}
+
+/* Headings */
 h1,
 h2 {
   font-family: 'Roboto Slab', serif;
-  /* Modern serif for headers */
   color: #0F172A;
-  /* Rich dark navy */
 }
 
 h1 {
@@ -159,13 +154,11 @@ p {
   margin: 10px 0;
   line-height: 1.6;
   color: #475569;
-  /* Softer dark gray for readability */
 }
 
 /* Buttons */
 .primary-button {
   background-color: #1E293B;
-  /* Charcoal gray */
   color: white;
   border: none;
   padding: 10px 20px;
@@ -178,12 +171,10 @@ p {
 .primary-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 2px 6px rgba(30, 41, 59, 0.5);
-  /* Charcoal shadow */
 }
 
 .secondary-button {
   background-color: #374151;
-  /* Dark steel gray */
   color: white;
   border: none;
   padding: 10px 20px;
@@ -196,7 +187,6 @@ p {
 .secondary-button:hover {
   transform: translateY(-2px);
   box-shadow: 0 2px 6px rgba(55, 65, 81, 0.5);
-  /* Steel shadow */
 }
 
 /* Status Messages */
@@ -213,27 +203,21 @@ p {
 /* Footer */
 .footer {
   background-color: #F1F5F9;
-  /* Slightly darker light gray */
   color: #0F172A;
-  /* Dark navy text */
   padding: 20px;
   margin-top: 40px;
   text-align: center;
   border-top: 3px solid #0F172A;
-  /* Dark navy accent */
 }
 
 /* Sections */
 .box-main {
   padding: 20px;
   background-color: white;
-  /* White card background */
   border: 2px solid #CBD5E1;
-  /* Light blue-gray border */
   border-radius: 8px;
   margin-bottom: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  /* Subtle shadow for depth */
 }
 
 .box-dark {
@@ -255,20 +239,14 @@ form {
 label {
   font-weight: bold;
   display: flex;
-  /* Keeps label and input on the same line */
   align-items: center;
-  /* Vertically aligns input with label text */
   margin-bottom: 5px;
-  /* Adds space between the label inputs */
   white-space: normal;
-  /* Allows the label to wrap properly when the viewport is narrow */
 }
 
 label span {
   margin-left: 5px;
-  /* Space between the checkbox/radio and the label text */
   white-space: normal;
-  /* Allow label text to wrap as needed */
 }
 
 input[type="text"],
