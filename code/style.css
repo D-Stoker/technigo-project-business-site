@@ -7,122 +7,118 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Navigation */
+/* Basic nav styling */
 nav {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: sticky;
-  top: 0;
-  background-color: #F8FAFC;
-  padding: 10px 20px;
-  border-bottom: 2px solid #CBD5E1;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative;
   z-index: 1000;
 }
 
-nav .logo-container {
-  flex-shrink: 0;
-  margin-right: 20px;
+/* Hamburger Menu Style */
+.hamburger {
+  font-size: 30px;
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  /* bigger #, higher position */
+  right: 20px;
+  z-index: 1100;
 }
 
-nav .logo {
-  height: 40px;
-  width: auto;
+/* For small screens (320px), adjust the position to the right edge of the hero image */
+@media (max-width: 320px) {
+  .hamburger {
+    top: 10px;
+    /* Align it closer to the top edge */
+    right: 10px;
+    /* Move it to the right edge */
+  }
 }
 
-nav ul {
+/* For larger screens, adjust the hamburger icon to be in line with the h1 tag */
+@media (min-width: 321px) {
+  .hamburger {
+    top: 0px;
+    /* Align it higher relative to the h1 text */
+  }
+}
+
+/* Checkbox (hidden toggle control for menu) */
+input[type="checkbox"] {
+  display: none;
+}
+
+/* Menu and overlay transition */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Dark background */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.menu {
+  position: fixed;
+  top: 0;
+  left: -300px;
+  /* Menu hidden by default */
+  width: 300px;
+  height: 100%;
+  background-color: #fff;
+  transition: left 0.3s ease;
+}
+
+.menu ul {
   list-style: none;
-  display: flex;
-  gap: 20px;
-  margin: 0;
   padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  flex-wrap: wrap;
+  justify-content: center;
+  height: 100%;
 }
 
-/* List Items */
-nav ul li {
-  display: inline-block;
-}
-
-nav ul li a {
-  text-decoration: none;
-  font-weight: 500;
-  padding: 8px 12px;
-  border-radius: 4px;
-  transition: background-color 0.3s;
-  color: inherit;
+.menu ul li {
+  padding: 20px;
+  width: 100%;
   text-align: center;
-  white-space: nowrap;
 }
 
-nav ul li a:hover {
-  background-color: #CBD5E1;
+.menu ul li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 20px;
 }
 
-/* Responsive Design */
-@media screen and (max-width: 600px) {
-  nav {
-    flex-direction: column;
-    /* Stack the items vertically on small screens */
-    align-items: center;
-    /* Center-align logo and links */
-  }
+/* When the checkbox is checked, show the menu and overlay */
+input[type="checkbox"]:checked~.overlay {
+  opacity: 1;
+  visibility: visible;
+}
 
-  nav ul {
-    width: 100%;
-    /* Takes up the full width */
-    flex-direction: column;
-    /* Stack the list items vertically */
-    align-items: center;
-    /* Center-align the items */
-    gap: 1px;
-    /* Reduce the gap between items */
-    padding: 0;
-    /* Remove extra padding from the container */
-  }
+input[type="checkbox"]:checked~.menu {
+  left: 0;
+  /* Slide the menu in */
+}
 
-  nav ul li {
-    margin: 2px 0;
-    /* Adjust margin to provide space between stacked links */
-    padding: 12px;
-    /* Adjust padding for a more button-like feel */
-    display: block;
-    /* Make the link a block-level element so it takes up full width */
-
-  }
-
-  nav ul li a {
-    padding: 8px 12px;
-    /* Adjust padding for a more compact look */
-    display: block;
-    /* Make the link a block-level element so it takes up full width */
-    line-height: 1.2;
-    /* Reduce line height for tighter spacing */
-  }
-
-  nav .logo {
-    height: 160px;
-    /* Larger logo size for smaller screens */
-    width: auto;
-  }
-
-  nav .logo-container {
-    margin-right: 20px;
-    /* Adds space below the logo on small screens */
-    border: 2px solid #CBD5E1;
-    /* Light blue-gray border */
-    border-radius: 8px;
-    /* Optional: round the corners */
-    width: auto;
-    /* Maintains aspect ratio */
-  }
+input[type="checkbox"]:checked~.hamburger {
+  transform: rotate(90deg);
+  /* Rotate hamburger when clicked */
 }
 
 header {
   position: relative;
   width: 100%;
+}
+
+.logo {
+  width: 200px;
+  height: auto;
 }
 
 .hero-image img {
@@ -143,6 +139,13 @@ h2 {
 h1 {
   font-size: 2rem;
 }
+
+@media (max-width: 550px) {
+  h1 {
+    padding-right: 50px;
+  }
+}
+
 
 h2 {
   font-size: 1.5rem;
