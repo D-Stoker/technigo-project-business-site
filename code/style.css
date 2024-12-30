@@ -17,20 +17,15 @@ nav {
 .hamburger {
   font-size: 30px;
   cursor: pointer;
-  position: absolute;
-  top: 20px;
-  /* bigger #, higher position */
-  right: 20px;
+  position: fixed;
   z-index: 1100;
 }
 
 /* For small screens (320px), adjust the position to the right edge of the hero image */
 @media (max-width: 320px) {
   .hamburger {
-    top: 10px;
-    /* Align it closer to the top edge */
-    right: 10px;
-    /* Move it to the right edge */
+    top: 25px;
+    right: 25px;
   }
 }
 
