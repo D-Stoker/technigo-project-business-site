@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Usage Guide</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Roboto+Slab:wght@600&display=swap" rel="stylesheet">
+    <style>
+    /* Base Styling */
+    body {
+        font-family: 'Roboto', sans-serif;
+        margin: 20px;
+        background-color: #F8FAFC; /* Soft light gray */
+        color: #1E293B; /* Dark charcoal for main text */
+    }
+
+    /* Headers */
+    h1, h2 {
+        font-family: 'Roboto Slab', serif; /* Modern serif for headers */
+        color: #0F172A; /* Rich dark navy */
+    }
+    h1 {
+        font-size: 2rem;
+    }
+    h2 {
+        font-size: 1.5rem;
+        margin-top: 40px;
+    }
+
+    /* Paragraph Text */
+    p {
+        margin: 10px 0;
+        line-height: 1.6;
+        color: #475569; /* Softer dark gray for readability */
+    }
+
+    /* Buttons */
+    .primary-button {
+        background-color: #1E293B; /* Charcoal gray */
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: transform 0.2s ease-in-out;
+    }
+    .primary-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 2px 6px rgba(30, 41, 59, 0.5); /* Charcoal shadow */
+    }
+
+    .secondary-button {
+        background-color: #374151; /* Dark steel gray */
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: transform 0.2s ease-in-out;
+    }
+    .secondary-button:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 2px 6px rgba(55, 65, 81, 0.5); /* Steel shadow */
+    }
+
+    /* Status Messages */
+    .success-message {
+        color: #16A34A; /* Rich green with depth */
+        font-weight: bold;
+    }
+    .error-message {
+        color: #DC2626; /* Deep, bold red */
+        font-weight: bold;
+    }
+
+
+    /* Footer */
+    .footer {
+        background-color: #F1F5F9; /* Slightly darker light gray */
+        color: #0F172A; /* Dark navy text */
+        padding: 20px;
+        margin-top: 40px;
+        text-align: center;
+        border-top: 3px solid #0F172A; /* Dark navy accent */
+    }
+
+    /* Example Section */
+    .example-section {
+        padding: 20px;
+        background-color: white; /* White card background */
+        border: 2px solid #CBD5E1; /* Light blue-gray border */
+        border-radius: 8px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    }
+</style>
+
+</head>
+<body>
+    <h1>Color Usage Guide</h1>
+
+    <h2>Primary Accent (Teal Blue)</h2>
+    <p>Used for headers, call-to-action buttons, and important highlights.</p>
+    <div class="example-section">
+        <h2>This is a Header Styled with Primary Accent</h2>
+        <button class="primary-button">Primary Button</button>
+    </div>
+
+    <h2>Neutral Light (Soft Gray)</h2>
+    <p>Used for background tones and less visually heavy sections.</p>
+    <div class="example-section" style="background-color: #F3F4F6;">
+        <p>This section uses the Neutral Light color as its background.</p>
+    </div>
+
+    <h2>Neutral Dark (Slate Gray)</h2>
+    <p>Used for body text, secondary buttons, and footer areas.</p>
+    <div class="example-section">
+        <button class="secondary-button">Secondary Button</button>
+        <p>This text is styled with Neutral Dark for body content.</p>
+    </div>
+
+    <h2>Success Green</h2>
+    <p>Used for success messages or confirmation highlights.</p>
+    <div class="example-section">
+        <p class="success-message">Success! Your action was completed successfully.</p>
+    </div>
+
+    <h2>Error Red</h2>
+    <p>Used for error messages or warnings.</p>
+    <div class="example-section">
+        <p class="error-message">Error! Something went wrong. Please try again.</p>
+    </div>
+
+    <div class="footer">
+        This is a footer styled with Neutral Dark as its background color.
+    </div>
+</body>
+</html>
