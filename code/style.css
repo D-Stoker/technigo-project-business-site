@@ -19,22 +19,8 @@ nav {
   cursor: pointer;
   position: fixed;
   z-index: 1100;
-}
-
-/* For small screens (320px), adjust the position to the right edge of the hero image */
-@media (max-width: 320px) {
-  .hamburger {
-    top: 25px;
-    right: 25px;
-  }
-}
-
-/* For larger screens, adjust the hamburger icon to be in line with the h1 tag */
-@media (min-width: 321px) {
-  .hamburger {
-    top: 0px;
-    /* Align it higher relative to the h1 text */
-  }
+  top: 20px;
+  right: 25px;
 }
 
 /* Checkbox (hidden toggle control for menu) */
@@ -60,7 +46,6 @@ input[type="checkbox"] {
   position: fixed;
   top: 0;
   left: -300px;
-  /* Menu hidden by default */
   width: 300px;
   height: 100%;
   background-color: #fff;
@@ -80,16 +65,51 @@ input[type="checkbox"] {
   height: 100%;
 }
 
+/* Existing Styles */
 .menu ul li {
   padding: 20px;
   width: 100%;
-  text-align: center;
+  text-align: right;
+  /* Align links to the right */
+  border-bottom: 1px solid #ddd;
+  /* Add a thin border at the bottom of each item for separation */
 }
 
 .menu ul li a {
   text-decoration: none;
   color: #333;
   font-size: 20px;
+  display: inline-block;
+  /* Makes the link behave like a block element */
+  padding: 10px 20px;
+  /* Padding to provide space between the link text and the border */
+  transition: background-color 0.3s ease, color 0.3s ease;
+  position: relative;
+  /* For positioning the right border */
+  margin-right: 20px;
+  /* Adds space from the edge of the menu */
+  letter-spacing: 5px;
+}
+
+/* Add a vertical line to the right of each link */
+.menu ul li a::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 3px;
+  /* Vertical line thickness */
+  background-color: #333;
+  /* Color of the vertical line */
+}
+
+/* Rollover Effect */
+.menu ul li a:hover {
+  background-color: #555;
+  /* Dark grey background on hover */
+  color: #fff;
+  /* Text turns white on hover */
 }
 
 /* When the checkbox is checked, show the menu and overlay */
