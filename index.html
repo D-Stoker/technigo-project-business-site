@@ -114,14 +114,21 @@
             style="color: red;">*</span></label>
         <input type="text" id="captcha" name="captcha" required>
 
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit" class="primary-button">
       </form>
     </div>
   </section>
 
   <div class="footer">
-    &copy; D. Stoker
+    &copy; <span id="year"></span> D. Stoker
+    <a href="https://github.com/D-Stoker" target="_blank">GitHub</a>
+    <a href="https://www.linkedin.com/in/daniel-stoker/" target="_blank">LinkedIn</a>
+    <a href="#top">Back to Top</a>
   </div>
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
   <script src="code/script.js"></script>
 </body>
 

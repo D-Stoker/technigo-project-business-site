@@ -242,6 +242,34 @@ p {
   margin-top: 40px;
   text-align: center;
   border-top: 3px solid #0F172A;
+  font-size: 0.9rem;
+}
+
+.footer a {
+  color: #0F172A;
+  text-decoration: none;
+  margin: 0 10px;
+  font-weight: bold;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Footer Icons */
+.footer i {
+  font-size: 1.2rem;
+  margin 0 5px;
+  color: #0F172A;
+}
+
+@media (max-width: 600px) {
+  .footer a {
+    display: block;
+    /* Stack links vertically on small screens */
+    margin: 5px 0;
+    /* Add spacing between stacked links */
+  }
 }
 
 /* Sections */
@@ -330,20 +358,6 @@ input[type="radio"] {
 
 textarea {
   resize: vertical;
-}
-
-input[type="submit"] {
-  background-color: #007BFF;
-  color: white;
-  border: none;
-  padding: 12px;
-  border-radius: 4px;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-input[type="submit"]:hover {
-  background-color: #0056b3;
 }
 
 /* Responsive design */
