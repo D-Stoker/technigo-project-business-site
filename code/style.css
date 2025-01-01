@@ -51,7 +51,23 @@ input[type="checkbox"] {
   background-color: #fff;
   transition: left 0.3s ease;
   z-index: 10;
-  /* Make sure menu is above other content */
+  /* recent add-on tryout: */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ditto, recent addition: */
+.menu-top {
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+  /* border-bottom: 2px solid black; */
+}
+
+.menu-logo {
+  max-width: 80%;
+  height: auto;
 }
 
 .menu ul {
@@ -70,7 +86,6 @@ input[type="checkbox"] {
   padding: 20px;
   width: 100%;
   text-align: right;
-  /* Align links to the right */
   border-bottom: 1px solid #ddd;
   /* Add a thin border at the bottom of each item for separation */
 }
@@ -87,7 +102,6 @@ input[type="checkbox"] {
   position: relative;
   /* For positioning the right border */
   margin-right: 20px;
-  /* Adds space from the edge of the menu */
   letter-spacing: 5px;
 }
 
