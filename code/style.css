@@ -1,4 +1,3 @@
-/* Base Styling */
 body {
   font-family: 'Roboto', sans-serif;
   margin: 20px;
@@ -7,13 +6,11 @@ body {
   scroll-behavior: smooth;
 }
 
-/* Basic nav styling */
 nav {
   position: relative;
   z-index: 1000;
 }
 
-/* Hamburger Menu Style */
 .hamburger {
   font-size: 30px;
   cursor: pointer;
@@ -23,12 +20,10 @@ nav {
   right: 25px;
 }
 
-/* Checkbox (hidden toggle control for menu) */
-input[type="checkbox"] {
+#menu-toggle {
   display: none;
 }
 
-/* Menu and overlay transition */
 .overlay {
   position: fixed;
   top: 0;
@@ -36,7 +31,6 @@ input[type="checkbox"] {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.7);
-  /* Dark background */
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -51,18 +45,16 @@ input[type="checkbox"] {
   background-color: #fff;
   transition: left 0.3s ease;
   z-index: 10;
-  /* recent add-on tryout: */
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-/* ditto, recent addition: */
 .menu-top {
   width: 100%;
   padding: 20px 0;
   text-align: center;
-  /* border-bottom: 2px solid black; */
+  /* option: border-bottom: 2px solid black; */
 }
 
 .menu-logo {
@@ -81,13 +73,11 @@ input[type="checkbox"] {
   height: 100%;
 }
 
-/* Existing Styles */
 .menu ul li {
   padding: 20px;
   width: 100%;
   text-align: right;
   border-bottom: 1px solid #ddd;
-  /* Add a thin border at the bottom of each item for separation */
 }
 
 .menu ul li a {
@@ -95,12 +85,9 @@ input[type="checkbox"] {
   color: #333;
   font-size: 20px;
   display: inline-block;
-  /* Makes the link behave like a block element */
   padding: 10px 20px;
-  /* Padding to provide space between the link text and the border */
   transition: background-color 0.3s ease, color 0.3s ease;
   position: relative;
-  /* For positioning the right border */
   margin-right: 20px;
   letter-spacing: 5px;
 }
@@ -113,17 +100,12 @@ input[type="checkbox"] {
   right: 0;
   height: 100%;
   width: 3px;
-  /* Vertical line thickness */
   background-color: #333;
-  /* Color of the vertical line */
 }
 
-/* Rollover Effect */
 .menu ul li a:hover {
   background-color: #555;
-  /* Dark grey background on hover */
   color: #fff;
-  /* Text turns white on hover */
 }
 
 /* When the checkbox is checked, show the menu and overlay */
@@ -134,12 +116,10 @@ input[type="checkbox"]:checked~.overlay {
 
 input[type="checkbox"]:checked~.menu {
   left: 0;
-  /* Slide the menu in */
 }
 
 input[type="checkbox"]:checked~.hamburger {
   transform: rotate(90deg);
-  /* Rotate hamburger when clicked */
 }
 
 header {
@@ -155,12 +135,9 @@ header {
 .hero-image img {
   width: 100%;
   height: auto;
-  /* Maintains aspect ratio */
   object-fit: cover;
-  /* Ensures the image covers the container */
 }
 
-/* Headings */
 h1,
 h2 {
   font-family: 'Roboto Slab', serif;
@@ -183,14 +160,12 @@ h2 {
   margin-top: 40px;
 }
 
-/* Paragraph Text */
 p {
   margin: 10px 0;
   line-height: 1.6;
   color: #475569;
 }
 
-/* Buttons */
 .primary-button {
   background-color: #1E293B;
   color: white;
@@ -223,7 +198,6 @@ p {
   box-shadow: 0 2px 6px rgba(55, 65, 81, 0.5);
 }
 
-/* Status Messages */
 .success-message {
   color: #16A34A;
   font-weight: bold;
@@ -234,7 +208,6 @@ p {
   font-weight: bold;
 }
 
-/* Footer */
 .footer {
   background-color: #F1F5F9;
   color: #0F172A;
@@ -272,7 +245,6 @@ p {
   }
 }
 
-/* Sections */
 .box-main {
   padding: 20px;
   background-color: white;
@@ -280,6 +252,43 @@ p {
   border-radius: 8px;
   margin-bottom: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  /* Include padding in width calculation */
+}
+
+/* Apply consistent alignment for form controls in .box-main */
+.box-main input[type="checkbox"],
+.box-main input[type="radio"] {
+  display: inline-block;
+  margin: 0 5px 0 0;
+  /* Add spacing between input and label */
+  vertical-align: middle;
+  /* Align vertically with text */
+}
+
+.box-main label {
+  display: inline-block;
+  vertical-align: middle;
+  /* Ensure labels align with inputs */
+}
+
+/* Add padding inside text boxes and ensure uniform width */
+.box-main input[type="text"],
+.box-main input[type="email"],
+.box-main input[type="tel"],
+.box-main textarea {
+  width: 100%;
+  /* Make text boxes fit container width */
+  padding: 8px;
+  /* Add padding inside text boxes */
+  margin-bottom: 10px;
+  /* Space between inputs */
+  box-sizing: border-box;
+  /* Include padding in width */
+  border: 1px solid #CBD5E1;
+  /* Optional: match border style */
+  border-radius: 4px;
+  /* Optional: smooth corners */
 }
 
 .box-dark {
@@ -335,25 +344,36 @@ input[type="radio"] {
 /* Apply specific styles to form elements within .box-main, but don't affect overall layout */
 .checkbox-group {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
-  /* Adds space between each checkbox group */
+  flex-direction: row;
+  /* gap: 5px; */
 }
 
 /* Align checkboxes and labels on the same line */
 .checkbox-group input[type="checkbox"] {
   vertical-align: middle;
-  /* Ensure the checkbox is vertically aligned with the label text */
-  margin: 0 5px 0 0;
-  /* Remove any default margins and space the checkbox from the label */
+  margin: 0 5px 0 15px;
 }
 
 /* Ensure labels stay inline with the checkbox */
 .checkbox-group label {
   display: inline-block;
-  /* Align the label inline with the checkbox */
   vertical-align: middle;
-  /* Vertically align label text with checkbox */
+}
+
+.radio-group {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.radio-group input[type="radio"] {
+  vertical-align: middle;
+  margin: 0 0 0 5px;
+}
+
+.radio-group label {
+  display: inline-block;
+  vertical-align: middle;
 }
 
 textarea {

@@ -63,7 +63,6 @@
 
   <section id="portfolio">
     <h2>Portfolio</h2>
-    <p class="error-message">[insert Carousel here?]</p>
     <div class="box-main">
       <p>Project 1: “Responsive News Website - A user-friendly, mobile-optimized site built with HTML and CSS to provide
         a seamless reading experience across devices.</p>
@@ -74,7 +73,6 @@
 
   <section id="contact">
     <h2>Contact</h2>
-    <p><em>[Insert contact form description here.]</em></p>
     <div class="box-main">
       <form action="https://httpbin.org/anything" method="POST">
         <label for="name">Full Name: <span style="color: red;">*</span></label>
@@ -85,10 +83,11 @@
 
         <label for="phone">Phone Number:</label>
         <input type="tel" id="phone" name="phone">
+
         <div class="checkbox-group">
           <label for="services">What services are you interested in?</label>
           <input type="checkbox" id="webdev" name="services" value="Web Development">
-          <label for="webdev">Web Development</label>
+          <label for="webdev">Web Dev.</label>
           <input type="checkbox" id="responsive" name="services" value="Responsive Design">
           <label for="responsive">Responsive Design</label>
           <input type="checkbox" id="ecommerce" name="services" value="E-commerce Setup">
@@ -97,18 +96,22 @@
         <label for="description">Briefly describe your project: <span style="color: red;">*</span></label>
         <textarea id="description" name="description" rows="4" required></textarea>
 
-        <label for="budget">Budget Range:</label>
-        <input type="radio" id="under500" name="budget" value="Under €500">
-        <label for="under500">Under €500</label><br>
-        <input type="radio" id="500to1000" name="budget" value="€500 - €1,000">
-        <label for="500to1000">€500 - €1,000</label><br>
+        <div class="radio-group">
+          <label for="budget">Budget Range:</label>
+          <input type="radio" id="under500" name="budget" value="Under €500">
+          <label for="under500">Under €500</label><br>
+          <input type="radio" id="500to1000" name="budget" value="€500 - €1,000">
+          <label for="500to1000">€500 - €1,000</label><br>
+        </div>
 
         <label for="timeline">Project Timeline: <span style="color: red;">*</span></label>
         <input type="text" id="timeline" name="timeline" placeholder="e.g., Within 2 weeks" required>
 
-        <label for="newsletter">Would you like to receive updates?</label>
-        <input type="checkbox" id="newsletter" name="newsletter" value="yes">
-        <label for="newsletter">Yes, send me updates.</label><br>
+        <div class="checkbox-group">
+          <label for="newsletter">Would you like to receive updates?</label>
+          <input type="checkbox" id="newsletter" name="newsletter" value="yes">
+          <label for="newsletter">Yes, send me updates.</label><br>
+        </div>
 
         <label for="captcha">Please solve: 3 + 5 = ? (To confirm you're not a bot.) <span
             style="color: red;">*</span></label>
