@@ -138,6 +138,27 @@ header {
   object-fit: cover;
 }
 
+.cta-text {
+  background-color: #374151;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 4px;
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+  display: inline-block;
+  /* Ensure text doesn't span full width */
+}
+
+.cta-text:hover {
+  transform: scale(1.025);
+  /* Slight scale on hover for interactivity */
+}
+
+
 h1,
 h2 {
   font-family: 'Roboto Slab', serif;
@@ -246,6 +267,10 @@ p {
 }
 
 .box-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   padding: 20px;
   background-color: white;
   border: 2px solid #CBD5E1;
@@ -305,6 +330,10 @@ form {
   background-color: #f9f9f9;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+form {
+  line-height: 1.5;
 }
 
 label {
