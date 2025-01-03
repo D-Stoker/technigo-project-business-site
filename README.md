@@ -1,4 +1,4 @@
-# D. Stoker Portfolio (site title)
+# D. Stoker Portfolio
 
 ## Project Overview: 
 This project involves creating a responsive business landing page with a hero image/video, and a signup form that posts to an external service. It focuses on practicing HTML form elements, responsive design, and clean coding practices.
