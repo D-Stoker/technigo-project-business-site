@@ -1,3 +1,7 @@
+/* -----------------------------------------------
+   General Styles
+   ----------------------------------------------- */
+
 html {
   scroll-behavior: smooth;
 }
@@ -15,6 +19,42 @@ nav {
   z-index: 1000;
 }
 
+header {
+  position: relative;
+  width: 100%;
+}
+
+h1,
+h2 {
+  font-family: 'Roboto Slab', serif;
+  color: #0F172A;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+@media (max-width: 550px) {
+  h1 {
+    padding-right: 50px;
+  }
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-top: 40px;
+}
+
+p {
+  margin: 10px 0;
+  line-height: 1.6;
+  color: #475569;
+}
+
+/* -----------------------------------------------
+   Navigation Styles
+   ----------------------------------------------- */
+
 .hamburger {
   font-size: 30px;
   cursor: pointer;
@@ -22,10 +62,6 @@ nav {
   z-index: 1100;
   top: 20px;
   right: 25px;
-}
-
-#menu-toggle {
-  display: none;
 }
 
 .overlay {
@@ -52,6 +88,10 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+#menu-toggle {
+  display: none;
 }
 
 .menu-top {
@@ -96,7 +136,7 @@ nav {
   letter-spacing: 5px;
 }
 
-/* Add a vertical line to the right of each link */
+/* Vertical line menu style */
 .menu ul li a::after {
   content: '';
   position: absolute;
@@ -126,11 +166,6 @@ input[type="checkbox"]:checked~.hamburger {
   transform: rotate(90deg);
 }
 
-header {
-  position: relative;
-  width: 100%;
-}
-
 .logo {
   width: 200px;
   height: auto;
@@ -141,6 +176,34 @@ header {
   height: auto;
   object-fit: cover;
   filter: grayscale(75%) brightness(150%) sepia(50%);
+}
+
+.box-main li {
+  list-style: upper-roman;
+}
+
+ol li {
+  margin-bottom: 15px;
+}
+
+/* -----------------------------------------------
+   Button / CTA Styles
+   ----------------------------------------------- */
+
+.primary-button {
+  background-color: #1E293B;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.primary-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 6px rgba(30, 41, 59, 0.5);
 }
 
 .cta-text {
@@ -160,89 +223,11 @@ header {
 
 .cta-text:hover {
   transform: scale(1.025);
-  /* Slight scale on hover for interactivity */
 }
 
-
-h1,
-h2 {
-  font-family: 'Roboto Slab', serif;
-  color: #0F172A;
-}
-
-h1 {
-  font-size: 2rem;
-}
-
-@media (max-width: 550px) {
-  h1 {
-    padding-right: 50px;
-  }
-}
-
-
-h2 {
-  font-size: 1.5rem;
-  margin-top: 40px;
-}
-
-p {
-  margin: 10px 0;
-  line-height: 1.6;
-  color: #475569;
-}
-
-.box-main li {
-  list-style: upper-roman;
-  /* Default numbers, can change to roman, lower-alpha, etc. */
-}
-
-ol li {
-  margin-bottom: 15px;
-}
-
-
-.primary-button {
-  background-color: #1E293B;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: transform 0.2s ease-in-out;
-}
-
-.primary-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 2px 6px rgba(30, 41, 59, 0.5);
-}
-
-.secondary-button {
-  background-color: #374151;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: transform 0.2s ease-in-out;
-}
-
-.secondary-button:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 2px 6px rgba(55, 65, 81, 0.5);
-}
-
-.success-message {
-  color: #16A34A;
-  font-weight: bold;
-}
-
-.error-message {
-  color: #DC2626;
-  font-weight: bold;
-}
+/* -----------------------------------------------
+   Footer Styles
+   ----------------------------------------------- */
 
 .footer {
   background-color: #F1F5F9;
@@ -275,11 +260,14 @@ ol li {
 @media (max-width: 600px) {
   .footer a {
     display: block;
-    /* Stack links vertically on small screens */
     margin: 5px 0;
-    /* Add spacing between stacked links */
   }
 }
+
+
+/* -----------------------------------------------
+   Layout Styles
+   ----------------------------------------------- */
 
 .box-main {
   display: flex;
@@ -300,15 +288,12 @@ ol li {
 .box-main input[type="radio"] {
   display: inline-block;
   margin: 0 5px 0 0;
-  /* Add spacing between input and label */
   vertical-align: middle;
-  /* Align vertically with text */
 }
 
 .box-main label {
   display: inline-block;
   vertical-align: middle;
-  /* Ensure labels align with inputs */
 }
 
 /* Add padding inside text boxes and ensure uniform width */
@@ -317,24 +302,17 @@ ol li {
 .box-main input[type="tel"],
 .box-main textarea {
   width: 100%;
-  /* Make text boxes fit container width */
   padding: 8px;
-  /* Add padding inside text boxes */
   margin-bottom: 10px;
-  /* Space between inputs */
   box-sizing: border-box;
-  /* Include padding in width */
   border: 1px solid #CBD5E1;
-  /* Optional: match border style */
   border-radius: 4px;
-  /* Optional: smooth corners */
 }
 
-.box-dark {
-  background-color: #F3F4F6;
-}
+/* -----------------------------------------------
+   Form Styles
+   ----------------------------------------------- */
 
-/* Form Elements */
 form {
   display: flex;
   flex-direction: column;
@@ -381,14 +359,10 @@ textarea {
 input[type="checkbox"],
 input[type="radio"] {
   margin: 0;
-  /* Remove default margin */
   vertical-align: middle;
-  /* Align to the middle of the text */
   width: auto;
-  /* Ensure the input takes its natural size */
 }
 
-/* Apply specific styles to form elements within .box-main, but don't affect overall layout */
 .checkbox-group {
   display: flex;
   flex-direction: row;
@@ -439,4 +413,34 @@ textarea {
   textarea {
     font-size: 14px;
   }
+}
+
+/* -----------------------------------------------
+   Future Styles
+   ----------------------------------------------- */
+
+.secondary-button {
+  background-color: #374151;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.secondary-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 2px 6px rgba(55, 65, 81, 0.5);
+}
+
+.success-message {
+  color: #16A34A;
+  font-weight: bold;
+}
+
+.error-message {
+  color: #DC2626;
+  font-weight: bold;
 }
