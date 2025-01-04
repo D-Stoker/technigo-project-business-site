@@ -192,6 +192,16 @@ p {
   color: #475569;
 }
 
+.box-main li {
+  list-style: upper-roman;
+  /* Default numbers, can change to roman, lower-alpha, etc. */
+}
+
+ol li {
+  margin-bottom: 15px;
+}
+
+
 .primary-button {
   background-color: #1E293B;
   color: white;
@@ -276,14 +286,13 @@ p {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding: 20px;
+  padding: 20px 20px 20px 40px;
   background-color: white;
   border: 2px solid #CBD5E1;
   border-radius: 8px;
   margin-bottom: 20px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
-  /* Include padding in width calculation */
 }
 
 /* Apply consistent alignment for form controls in .box-main */
@@ -339,6 +348,10 @@ form {
 
 form {
   line-height: 1.5;
+}
+
+fieldset {
+  border: none;
 }
 
 label {
