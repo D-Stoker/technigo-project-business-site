@@ -166,7 +166,7 @@ input[type="checkbox"]:checked~.hamburger {
    Layout Styles
    ----------------------------------------------- */
 .box-main {
-  display: flex;
+  display: block;
   justify-content: center;
   align-items: center;
   flex-direction: column;
@@ -257,9 +257,9 @@ ol li {
    Form Styles
    ----------------------------------------------- */
 form {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.5;
+  display: block;
+  /* flex-direction: column; */
+  /* line-height: 1.5; */
   max-width: 100%;
   width: 100%;
   margin: 0 auto;
@@ -306,34 +306,6 @@ input[type="radio"] {
   width: auto;
 }
 
-.checkbox-group {
-  display: flex;
-  flex-direction: column;
-  /* gap: 5px; */
-}
-
-/* Align checkboxes and labels on the same line */
-.checkbox-group input[type="checkbox"] {
-  vertical-align: middle;
-  margin-right: 10px;
-}
-
-.checkbox-item {
-  display: flex;
-  align-items: center;
-}
-
-.checkbox-item label {
-  margin: 0;
-  display: inline-block;
-}
-
-/* Ensure labels stay inline with the checkbox */
-.checkbox-group label {
-  display: flex;
-  vertical-align: middle;
-}
-
 .radio-group {
   display: flex;
   flex-direction: row;
@@ -356,7 +328,7 @@ textarea {
 
 @media (max-width: 600px) {
   form {
-    padding: 10px;
+    padding: 15px;
   }
 
   input[type="text"],
@@ -365,6 +337,30 @@ textarea {
   textarea {
     font-size: 14px;
   }
+}
+
+/* Checkbox group container style */
+.checkbox-group {
+  display: block;
+  /* Ensure this container is a block element */
+  margin-top: 20px;
+}
+
+/* Style for each checkbox and its label */
+.checkbox-group input[type="checkbox"],
+.checkbox-group label {
+  display: inline-block;
+  margin-right: 10px;
+  /* Space between checkbox and label */
+  margin-bottom: 10px;
+  /* Space between each checkbox-label pair */
+}
+
+/* The question (label) should be on its own line */
+.checkbox-group label:first-of-type {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 /* -----------------------------------------------
