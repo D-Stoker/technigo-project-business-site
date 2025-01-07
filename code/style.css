@@ -51,6 +51,11 @@ p {
   color: #475569;
 }
 
+:target {
+  scroll-margin-top: 25px;
+  /* anchor link target area adjustment */
+}
+
 /* -----------------------------------------------
    Navigation Styles
    ----------------------------------------------- */
