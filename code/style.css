@@ -51,6 +51,16 @@ p {
   color: #475569;
 }
 
+a {
+  color: #0F172A;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 :target {
   scroll-margin-top: 25px;
   /* anchor link target area adjustment */
@@ -419,6 +429,44 @@ textarea {
   margin: 0 auto;
   padding: 1rem;
   max-width: 1200px;
+}
+
+#portfolio {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+#portfolio>h2 {
+  margin-bottom: 10px;
+}
+
+#portfolio .preview-container img {
+  width: 200px;
+  height: auto;
+  border: 1px solid black;
+}
+
+.preview-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+  #portfolio .preview-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #portfolio .preview-container img {
+    width: 100%;
+    max-width: 250px;
+    margin-bottom: 25px;
+  }
 }
 
 /* -----------------------------------------------
